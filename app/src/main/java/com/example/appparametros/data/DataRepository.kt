@@ -1,5 +1,7 @@
 package com.example.appparametros.data
 
+import com.example.appparametros.navigation.USER
+
 val userDefault = User(
     userId = "aluno",
     name = "Aluno DS",
@@ -11,20 +13,33 @@ val userDefault = User(
     bio = "Estou aprendendo passar parâmetros no JETPACK..."
 )
 
-val marcelo = User(
-    userId = "Marcelo",
-    name = "Marcelo",
+val matheus = User(
+    userId = "Matheus",
+    name = "Matheus",
     avatarUrl = null,
     age = 51,
-    score = "90",
-    registerDate = "15/06/1973",
-    email = "marcelo.collado@etec.sp.gov.br",
-    bio = "Passei os parâmetros de usuários"
+    score = 100,
+    registerDate = "27/12/2007",
+    email = "matheus.santana114@etec.sp.gov.br",
+    bio = "Aluno do 3 DS Manhã"
+)
+
+val lucasTino = User(
+    userId = "Lucas Tino",
+    name = "Lucas Tino",
+    avatarUrl = null,
+    age = 18,
+    score = 100,
+    registerDate = "28/03/2025",
+    email = "lucas.rosa@etec.sp.gov.br",
+    bio = "Aluno do 3 DS Manhã"
 )
 
 fun getUserData(userName: String): User {
-    return if (userName == "Marcelo") {
-        marcelo
+    return if (userName == "Matheus") {
+        matheus
+    } else if (userName == "Lucas Tino") {
+        lucasTino
     } else {
         userDefault
     }

@@ -19,6 +19,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.example.appparametros.ui.theme.AppParametrosTheme
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -48,7 +49,7 @@ fun LoginScreen(navController: NavController) {
 @Preview(showBackground = true)
 @Composable
 fun LoginScreenPreview() {
-    NavigationTheme {
+    AppParametrosTheme {
         LoginScreen(navController = rememberNavController())
     }
 }

@@ -12,6 +12,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.compose.rememberNavController
+import com.example.appparametros.data.User
+import com.example.appparametros.ui.theme.AppParametrosTheme
 
 
 @Composable
@@ -53,13 +55,5 @@ fun HomeScreen(user: User) {
         )
 
         Text(text = "Idade: ${user.age}", modifier = Modifier.padding(top = 4.dp), fontSize = 16.sp)
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun HomeScreenPreview() {
-    NavigationTheme {
-        HomeScreen(navController = rememberNavController())
     }
 }
