@@ -1,6 +1,8 @@
 package com.example.appparametros.navigation
 
 import androidx.compose.runtime.Composable
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.example.appparametros.data.getUserData
 import com.example.appparametros.ui.screen.HomeScreen
 
@@ -8,5 +10,5 @@ import com.example.appparametros.ui.screen.HomeScreen
 fun HomeRoute(userName: String) {
     val user = getUserData(userName = userName)
 
-    HomeScreen(user = user)
+    HomeScreen(user = user, navController = rememberNavController())
 }
