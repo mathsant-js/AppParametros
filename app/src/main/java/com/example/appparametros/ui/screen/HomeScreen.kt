@@ -5,6 +5,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
@@ -44,6 +45,7 @@ fun HomeScreen(user: User, navController: NavController) {
     Column(
         Modifier
             .fillMaxWidth()
+            .fillMaxHeight()
             .background(Color(23,23,23)),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -114,5 +116,13 @@ fun HomeScreen(user: User, navController: NavController) {
         )
 
         Text(text = "Idade: ${user.age}", modifier = Modifier.padding(top = 4.dp), color = Orange, fontSize = 16.sp)
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun HomePreview() {
+    AppParametrosTheme {
+        HomeScreen(user = lucasTino, navController = rememberNavController())
     }
 }

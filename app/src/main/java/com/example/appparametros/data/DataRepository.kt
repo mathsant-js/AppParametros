@@ -18,7 +18,7 @@ val userDefault = User(
 val matheus = User(
     userId = "Matheus",
     name = "Matheus",
-    avatarUrl = "matheusSantanaImagem",
+    avatarUrl = "matheussantanaimagem",
     age = 17,
     score = 100,
     registerDate = "27/12/2007",
@@ -29,12 +29,45 @@ val matheus = User(
 val lucasTino = User(
     userId = "Lucas Tino",
     name = "Lucas Tino",
-    avatarUrl = "lucasTinoImagem",
+    avatarUrl = "lucastinoimagem",
     age = 18,
     score = 100,
     registerDate = "28/03/2025",
     email = "lucas.rosa@etec.sp.gov.br",
     bio = "Aluno do 3 DS Manhã"
+)
+
+val rebeca = User(
+    userId = "Rebeca",
+    name = "Rebeca",
+    avatarUrl = "rebecaimagem",
+    age = 18,
+    score = 100,
+    registerDate = "28/03/2025",
+    email = "rebeca.moura@etec.sp.gov.br",
+    bio = "Aluna do 3 DS Manhã"
+)
+
+val luizGabriel = User(
+    userId = "Luiz Gabriel",
+    name = "Luiz Gabriel",
+    avatarUrl = "luizimagem",
+    age = 18,
+    score = 100,
+    registerDate = "28/03/2025",
+    email = "luiz.ferreira@etec.sp.gov.br",
+    bio = "Aluna do 3 DS Manhã"
+)
+
+val marcelo = User(
+    userId = "Marcelo",
+    name = "Marcelo Collado",
+    avatarUrl = "marceloimagem",
+    age = 51,
+    score = 100,
+    registerDate = "28/03/2025",
+    email = "marcelo.collado@etec.sp.gov.br",
+    bio = "Professor do 3 DS Manhã"
 )
 
 fun getUserData(userName: String): User {
@@ -43,6 +76,12 @@ fun getUserData(userName: String): User {
         matheus
     } else if (lowerCaseName == "lucas tino") {
         lucasTino
+    } else if (lowerCaseName == "rebeca") {
+        rebeca
+    } else if (lowerCaseName == "luiz gabriel") {
+        luizGabriel
+    } else if (lowerCaseName == "marcelo") {
+        marcelo
     } else {
         userDefault
     }
