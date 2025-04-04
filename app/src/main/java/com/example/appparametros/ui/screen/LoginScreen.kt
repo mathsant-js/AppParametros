@@ -58,7 +58,7 @@ fun LoginScreen(navController: NavController) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Box(
-            modifier = Modifier
+            Modifier
                 .height(200.dp)
                 .background(
                     brush = Brush.horizontalGradient(
@@ -79,7 +79,9 @@ fun LoginScreen(navController: NavController) {
                     .size(150.dp)
             )
         }
-        Text(text = "Você está na tela de login",
+
+        Text(
+            text = "Você está na tela de login",
             modifier = Modifier.padding(top = 16.dp),
             color = OrangeIntermediary
         )

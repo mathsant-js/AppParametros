@@ -12,6 +12,9 @@ import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults.outlinedButtonColors
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -116,6 +119,22 @@ fun HomeScreen(user: User, navController: NavController) {
         )
 
         Text(text = "Idade: ${user.age}", modifier = Modifier.padding(top = 4.dp), color = Orange, fontSize = 16.sp)
+
+        OutlinedButton(
+            onClick = {
+                navController.popBackStack()
+            },
+            modifier = Modifier.padding(16.dp),
+            colors = outlinedButtonColors(
+                containerColor = Color(46,46,46)
+            )
+        ) {
+            Text(
+                text = "Voltar para Login",
+                color = Orange,
+                fontSize = 16.sp
+            )
+        }
     }
 }
 
