@@ -1,5 +1,7 @@
 package com.example.appparametros.data
 
+import java.util.Locale
+import androidx.compose.ui.text.toLowerCase
 import com.example.appparametros.navigation.USER
 
 val userDefault = User(
@@ -36,9 +38,10 @@ val lucasTino = User(
 )
 
 fun getUserData(userName: String): User {
-    return if (userName == "Matheus") {
+    val lowerCaseName = userName.lowercase(Locale.ROOT)
+    return if (lowerCaseName == "matheus") {
         matheus
-    } else if (userName == "Lucas Tino") {
+    } else if (lowerCaseName == "lucas tino") {
         lucasTino
     } else {
         userDefault
